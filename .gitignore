@@ -1,0 +1,4 @@
+send
+**/target
+node_modules
+.*.*

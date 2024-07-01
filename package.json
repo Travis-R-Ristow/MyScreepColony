@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@types/lodash": "^4.17.4",
+    "@types/node": "^20.12.12",
+    "@types/screeps": "^3.3.8"
+  },
+  "scripts": {
+    "build": "./flatten_shortcut.cmd",
+    "send": "./flatten_shortcut.cmd && tsc && (robocopy ./send %LOCALAPPDATA%/Screeps/scripts/screeps.com/BaseHivemind main.js /copy:D) ^& IF %ERRORLEVEL% EQU 1 exit 0",
+    "send_old": "tsc && (robocopy ./send %LOCALAPPDATA%/Screeps/scripts/screeps.com/BaseHivemind /S /copy:D) ^& IF %ERRORLEVEL% EQU 1 exit 0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0-beta"
+  }
+}
